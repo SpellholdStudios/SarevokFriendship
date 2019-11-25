@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style type="text/css">
+    /*<![CDATA[*/
+    <!-- 
+      body {
+        margin: 0;
+        padding: 0;
+        cursor: default;
+        text-align: center;
+        color: #000;
+        background: #e3e3db url('http://spellholdstudios.net/images/sh_bg_main.jpg');
+      }
+      
+      #wrap {
+        text-align: left;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 88%;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        font-size: 12px;
+        color: #333;
+      }
+      
+      #header {
+        text-align: center;
+        background: #e5e5e5;
+        border: 1px solid #781808;
+        border-top: 5px solid #781808;
+        border-bottom: 5px solid #781808;
+        padding: 5px 0 13px 0;
+      }
+      
+      #header .about {
+        margin: 7px 0 0 0;
+        padding: 0;
+        font-style: italic;
+        color: #555;
+      }
+      
+      #header .menu {
+        font-weight: bold;
+        margin: 0;
+        color: #999;
+      }
+      
+      #header .menu a:link,
+      #header .menu a:visited {
+        color: #333;
+      }
+      
+      #maindiv {
+        margin: 0 auto;
+        margin-top: -20px;
+        width: 80%;
+      }
+      
+      #maindiv .content {
+        counter-increment: kman;
+        counter-reset: h2;
+        background-color: #e8e8e6;
+        padding: 0 0 25px 0;
+        margin: 50px auto;
+        border-width: 1px 1px 4px 10px;
+        border-style: solid;
+        border-color: #781808;
+        position: relative;
+        display: block;
+      }
+      
+      #maindiv .content::before {
+        content: counter(kman, lower-roman);
+        font-size: 100%;
+        font-weight: bold;
+        text-align: center;
+        color: #eee;
+        background-color: #781808;
+        width: 35px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+      }
+      
+      h2 {
+        display: block;
+        font-family: Verdana, Trebuchet MS, Arial, serif;
+        text-align: left;
+        text-indent: 30px;
+        padding: 0px;
+        margin: 20px 0 0 0;
+        border-bottom: dotted 2px #d0d0d0;
+        border-top: dotted 2px #d0d0d0;
+        background: #deded9;
+        font-size: 160%;
+      }
+      
+      h2::first-letter {
+        color: #781808;
+        background-color: transparent;
+      }
+      
+      #maindiv p {
+        font-size: 100%;
+        font-style: normal;
+        line-height: 150%;
+        padding: 0px;
+        margin: 10px auto;
+        width: 90%;
+        display: block;
+      }
+      
+      #maindiv address a:link,
+      #maindiv address a:visited {
+        font-weight: bold;
+        text-decoration: underline;
+        background-color: transparent;
+        color: #eaeaea !important;
+        padding-right: 5px;
+        padding-left: 6px;
+      }
+      
+      #maindiv address a:focus,
+      #maindiv address a:hover {
+        text-decoration: none;
+        color: #F1F1F1;
+        border: 0;
+      }
+      
+      #maindiv address a:active {
+        color: #fff;
+        text-decoration: line-through;
+        border: none;
+      }
+      
+      #maindiv address {
+        font-size: 95%;
+        font-style: normal;
+        font-weight: bold;
+        text-decoration: none;
+        color: #BBB;
+        background-color: #781808;
+        padding: 3px 0px 0px;
+        margin: 0px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        display: block;
+        text-align: right;
+      }
+      
+      #maindiv .important {
+        font-size: 95%;
+        font-family: Verdana;
+        text-align: left;
+        background-color: #F1F1F1;
+        border-top: solid 1px #aaa;
+        border-bottom: solid 1px #aaa;
+        border-left: solid 6px #aaa;
+        border-right: solid 6px #aaa;
+        padding: 10px;
+        margin: 20px auto;
+        width: 80%;
+        line-height: 160%;
+      }
+      
+      #maindiv .important::before {
+        display: none;
+      }
+      
+      #maindiv .important p {
+        font-size: 100%;
+        text-indent: 0px;
+        margin: 5px 0 10px 0;
+      }
+      
+      #maindiv ul {
+        margin: -10px 0 0 30px;
+        *margin-left: 65px;
+      }
+      
+      #maindiv ol {
+        margin: -10px 0 0 35px;
+        *margin-left: 70px;
+      }
+      
+      #maindiv .important ul {
+        margin: -10px 0 0 15px;
+      }
+      
+      #maindiv .important ol {
+        margin: -10px 0 0 20px;
+      }
+      
+      #maindiv ul li {
+        list-style-type: square;
+        line-height: 150%;
+      }
+      
+      #maindiv ol li {
+        line-height: 150%;
+      }
+      
+      .t1 {
+        font-weight: bold;
+        width: 26%;
+        text-align: right;
+        clear: right;
+        float: left;
+        *float: none;
+        *margin-left: 65px;
+        line-height: 22px;
+      }
+      
+      .t2 {
+        text-align: left;
+        width: 73%;
+        float: right;
+        *float: none;
+        line-height: 22px;
+      }
+      
+      hr {
+        margin: 10px 0 10px 0;
+        padding: 0;
+        height: 1px;
+        border: 0;
+        color: #aaa;
+        background-color: #aaa;
+      }
+      
+      hr.floatfix {
+        clear: both;
+        color: #e8e8e6;
+        background-color: #e8e8e6;
+        *margin: 0;
+        *padding: 0;
+      }
+      
+      h1 {
+        font-size: 225%;
+        color: #444;
+        padding: 5px 0 5px 0;
+        margin: 0;
+        width: 100%;
+      }
+      
+      h3,
+      h4,
+      h5 {
+        margin: 10px 40px 10px 40px;
+        padding: 0;
+      }
+      
+      h3 {
+        font-size: 125%;
+        font-style: italic;
+      }
+      
+      h4 {
+        font-size: 125%;
+      }
+      
+      h5 {
+        font-size: 100%;
+      }
+      
+      h6 {
+        width: 100%;
+        margin: 10px 0 15px 0;
+        background-color: #ECECEC;
+        text-align: left;
+        text-indent: 30px;
+        font-size: 100%;
+        font-style: italic;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border-bottom: solid 1px #bbb;
+        border-top: solid 1px #bbb;
+      }
+      
+      a:link,
+      a:visited {
+        color: #781808;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:active {
+        color: #222;
+        border-bottom: 1px solid black;
+      }
+
+    -->
+    /*]]>*/
+    </style>
+    <title>SPELLHOLD STUDIOS - Sarevok Friendship</title>
+  </head>
+  <body>
+    <a name="top" id="top"></a>
+    <div id="wrap">
+
+      <div id="header">
+        <h1>Sarevok Friendship</h1>
+        <strong>Un mod Spellhold Studios pour Baldur's Gate 2 : ToB</strong>
+        <hr />
+        <p class="about">
+          Auteur : Aeryn
+        </p>
+        <p class="about">
+
+          <a href="http://www.spellholdstudios.net/ie/npciep">Site du mod</a> &#8226;
+          <a href="http://www.shsforums.net/index.php?showforum=574">Forum du mod</a> &#8226;
+          Version: 2.5
+        </p>
+        <hr />
+        <p class="menu">
+          <a href="#intro">Introduction</a> &middot;
+          <a href="#installation">Installation</a> &middot;
+          <a href="#faq">FAQ</a> &middot;
+          <a href="#credits">Crédits</a> &middot;
+          <a href="#version">Historique des versions</a>
+        </p>
+
+      </div>
+      <div id="maindiv">
+
+        <!-- ================== I n t r o d u c t i o n ================== -->
+        <a name="intro" id="intro"></a>
+        <div class="content">
+          <h2>Introduction</h2><br>
+
+          <p>Un élément dont beaucoup trouvent les PNJ de Bioware dépourvus, c'est la relation plus complexe permise par les mods PNJ modernes - surtout en ce qui concerne les "amitiés", les relations que les PNJ ont avec le PJ lorsqu'ils n'ont pas une romance active.</p>
+
+          <p>Ce mod ajoute une série de dialogues à Sarevok, le frère du PJ, et développe ses expériences et ses difficultés.</p>
+
+          <p>Visitez le <a href="http://www.spellholdstudios.net/ie/npciep">site web</a> ou le <a href="http://www.shsforums.net/index.php?showforum=555">forum</a> pour les dernières mises à jour.</p><br>
+
+          <address>
+            <span class="footer">Sarevok Friendship &gt; Introduction</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+          </address>
+        </div>
+
+        <!-- ================== I n s t a l l a t i o n ================== -->
+        <a name="installation" id="installation"></a>
+        <div class="content">
+          <h2>Installation</h2><br>
+          <h5>Windows</h5>
+
+          <p>Sarevok Friendship est un mod WeiDU, compressé via une archive extractable .ZIP. Décompressez simplement l'archive dans votre répertoire Baldur's Gate II et exécutez "<em> setup-sarevokfriendship.exe </em>".
+          <p>Pour désinstaller, exécutez à nouveau "<em> setup-sarevokfriendship.exe</em> " et sélectionnez l'option de désinstallation.</p></br>
+
+		<center><hr style="width: 90%; color: #781808; background-color: #781808; " /></center><br>
+
+          <h5>Compatibility and Installation Order</h5>
+          <p>Le mod Sarevok Friendship devrait être compatible avec n'importe quel mod WeiDU, nous ne pouvons cependant pas tous les tester. Il n'est compatible qu'avec BGII : ToB. Si vous rencontrez une erreur, veuillez contactez <a href="kae@spellholdstudios.net">K'aeloree</a> ou bien postez dans les <a href="http://www.shsforums.net/index.php?showforum=574">forums</a>.</p>
+          <p>Bien qu'il ne soit pas requis pour faire correctement tourner Sarevok Friendship, il est toujours utile d'avoir installé la dernière version du <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a>.</p><br>
+
+          <address>
+            <span class="footer">Sarevok Friendship &gt; Installation</span> <a href="#top">HAUT DE PAGE</a>
+          </address>
+        </div>
+
+        <!-- ================== F A Q ================== -->
+        <a name="faq" id="faq"></a>
+        <div class="content">
+          <h2>Foire Aux Questions</h2><br>
+
+          <p><strong>Q : Sarevok Friendship est-il compatible avec le mod XYZ ?</strong><br />A : Il devrait l'être oui, mais nous n'avons pas testé tous les mods disponibles. Si vous rencontrez une erreur, veuillez contactez <a href="kae@spellholdstudios.net">K'aeloree</a> ou bien postez dans les <a href="http://www.shsforums.net">forums</a>.</p>
+          <p><strong>Q : Sarevok Friendship est-il compatible avec Sarevok Romance ?</strong><br />A : Oui ; les conversations d'amitié s'arrêteront une fois que la romance débutera.</p>
+          <p><strong>Q : Quand débutera l'amitié ?</strong><br />A : Elle devrait débuter peu de temps après qu'Sarevok ait rejoint le groupe </p>
+          <p><strong>Q : Ce mod ne respecte pas *du tout* le personnage</strong><br/>A : Je suis toujours à la recherche de moyens d'améliorer l'incarnation des personnages dans ce mod, envoyez-moi toute suggestion ou critique (kae@spellholdstudios.net) ou bien postez sur les <a href="http://www.shsforums.net">forums</a>.</p>
+          <p><strong>Q : As-tu l'intention d'étendre le mod en lui ajoutant d'autres dialogues dans le futur ?</strong><br/>A : Non, il n'est pour l'instant pas prévu de faire des ajouts au mod, mais si vous avez des suggestions, n'hésitez pas !</p>
+          <p><strong>Q : Combien de dialogues ont été ajoutés en tout ?</strong><br />A : Il y a un total de 7 nouveaux dialogues ajoutés par le mod. Certains d'entre eux se produisent sous certaines conditions - pour plus d'informations, n'hésitez pas à demander sur le forum.</p>
+          <p><strong>Q : Ce mod change-t-il le jeu d'une façon ou d'une autre, hormis les nouveaux dialogues de Sarevok ?</strong><br />A : Normalement non.</p>
+          <p><strong>Q : Y a-t-il une chance pour que des dialogues initiés par le joueur soient ajoutés dans le futur ?</strong><br />A : Ce n'est pas prévu pour l'heure, mais si des joueurs sont intéressés je serais ravie d'envisager d'en ajouter lors des versions futures.</p>
+          <p><strong>Q : Je souhaiterais traduire Sarevok Friendship dans une autre langue. Pourrais-tu TRAifier le mod ?</strong><br />A : Bien sûr, j'en serai heureuse. Si vous souhaitez traduire, envoyez-moi un mot et je verrai ce que je peux faire pour la prochaine version.</p><br>
+
+          <address>
+            <span class="footer">Sarevok Friendship &gt; FAQ</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+          </address>
+        </div>
+
+        <!-- ================== C r e d i t s ================== -->
+        <a name="credits" id="credits"></a>
+        <div class="content">
+
+          <h2>Crédits</h2><br>
+          <span class="t1">Auteur :</span> <span class="t2">Aeryn</span><br />
+          <span class="t1">Codeur :</span> <span class="t2">Lava Del'Vortel</span><br />
+
+          <hr class="floatfix" /><br>
+          <h5>Remerciements:</h5><br>
+          <ul>
+            <li>Merci à tous ceux qui ont travaillé sur l'Interaction Expansion Project et à tous ceux qui ont contribué au mod !</li>
+            <li>Traduction française : Isaya.</li>
+            <li>Traduction polonaise : Astharoshe, member of Stars of Mystra.</li>
+            <li>Traduction chinoise: Merzbau.</li>
+            <li>Remerciements à : l'équipe IEP, Alessia, IceDragon, BGII-addicted, AmyAE, Dagger, lotiel, JupitersDarling, zarffyn et Arconian03</li>
+          </ul><br><br>
+
+          <h5>Programmes/outils utilisés pour la création :</h5><br />
+          <ul>
+           <li><a href="https://github.com/WeiDUorg/weidu/releases"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a>, de Wes Weimer, Valerio Bigiani (the bigg) et Wisp.</li>
+            <li><a href="https://github.com/Argent77/NearInfinity/releases">Near Infinity</a>, de Jon Olav Hauglid, FredSRichardson et Argent77.</li>
+            <li><a href="http://www.rarlab.com/">WinRAR</a>, de Eugene Roshal/Alexander Roshal.</li>
+            <li><a href="https://gibberlings3.github.io/iesdp/"><acronym title="Infinity Engine Structures Description Project">IESDP</acronym></a>, entretenu par igi et lynx.</li>
+          </ul><br><br>
+
+          <h5>Droits d'auteur :</h5>
+          <div class="important">
+            <p>Sarevok Friendship a été développé par Aeryn, basé sur le jeu Baldur's Gate II et son extension.</p>
+            <p>Tout le contenu du mod appartient à &copy; Aeryn.</p>
+            <p>Baldur's Gate II : Shadows of Amn et Baldur's Gate II : Throne of Bhaal appartiennent à &copy; TSR, Inc. The BioWare Infinity Engine appartient à &copy; BioWare Corp.</p>
+            <p>Veuillez noter que tout partage ou hébergement de ce mod est expressément non désiré sans la permission de l'auteur.</p>
+          </div>
+
+          <address>
+            <span class="footer">Sarevok Friendship &gt; Credits</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+          </address>
+        </div>
+
+        <!-- ================== H i s t o r i q u e d e s V e r s i o n s ================== -->
+        <a name="version" id="version"></a>
+
+        <div class="content">
+          <h2>Historique des versions</h2><br>
+
+          <h6>Version 2.5 (November 25, 2019)</h6>
+          <ul>
+            <li>Added <em>sarevokfriendship.ini</em> metadata file to support AL|EN's "Project Infinity".</li>
+            <li>Added REQUIRE_PREDICATE process to avoid installing the mod in inaccurate games.</li>
+            <li>tp2 file: added credits for translations.</li>
+            <li>README command now accepts translated files.</li>
+            <li>Updated deprecated modding tools links.</li>
+            <li>Lower cased files.</li>
+            <li>Updated and renamed readme files to <em>sarevokfriendship-readme-%LANGUAGE%.html</em>.</li>
+            <li>Included Linux and Mac Os X versions in the same package (thanks AL|EN!).</li>
+            <li>Transfered mod to SpellHold Studios GitHub account.</li>
+          </ul><br>
+
+          <h6>Version 2.4 (14 August 2017)</h6>
+          <ul>
+            <li>Fixed Draconis talk.</li>
+            <li>Updated WeiDU installer to v246.</li>
+          </ul><br>
+
+          <h6>Version 2.3</h6>
+          <ul>
+            <li>Added Chinese translation by Merzbau.</li>
+         </ul><br>
+
+          <h6>Version 2.2</h6>
+          <ul>
+            <li>Added Polish translation by Astharoshe, member of Stars of Mystra.</li>
+            <li>Added translators to tp2.</li>
+         </ul><br>
+
+          <h6>Version 2.1</h6>
+          <ul>
+            <li>Changed readme path to the up to date one.</li>
+         </ul><br>
+
+          <h6>Version 2.0 (April 20, 2014)</h6>
+          <ul>
+            <li>Added French translation provided by Isaya and included better EE/EET compatibility.</li>
+          </ul><br>
+
+          <h6>Version 1.0 (December 30, 2012)</h6>
+          <ul>
+            <li>Initial release.</li>
+          </ul><br>
+
+          <address>
+            <span class="footer">Sarevok Friendship &gt; Historique des versions</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+          </address>
+        </div>
+
+      </div>
+    </div>
+  </body>
+
+</html>
