@@ -1,0 +1,305 @@
+//melissan talk (IEP)
+
+IF
+    InParty(Myself)
+    See("MEL01")
+    AreaCheck("AR5000")
+    Global("I#SarevokMel","GLOBAL",0)
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokMel","GLOBAL",1)
+    RealSetGlobalTimer("I#SarevokMelTime","GLOBAL",300)
+END
+
+IF
+    InParty(Myself)
+    AreaCheck("AR5000")
+    CombatCounter(0)
+    !See([ENEMY])
+    GlobalGT("TalkedSarMel01","GLOBAL",0)
+    Global("I#SarevokMel","GLOBAL",1)
+    RealGlobalTimerExpired("I#SarevokMelTime","GLOBAL")
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokMel","GLOBAL",2)
+END
+
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    Global("I#SarevokMel","GLOBAL",2)
+    See(Player1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+//bhaal temple talk (IEP)
+
+IF
+    InParty(Myself)
+    AreaCheck("AR5202")
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#SarevokNya","GLOBAL",0)
+    GlobalGT("TalkedToNyalee","GLOBAL",0)
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("I#SarevokNyaTime","GLOBAL",600)
+    SetGlobal("I#SarevokNya","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#SarevokNya","GLOBAL",1)
+    RealGlobalTimerExpired("I#SarevokNyaTime","GLOBAL")
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokNya","GLOBAL",2)
+END
+
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    See(Player1)
+    Global("I#SarevokNya","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+//gromnir is dead (IEP)
+
+IF
+    InParty(Myself)
+    Dead("GROMNIR")
+    Global("I#SarevokGromDead","GLOBAL",0)
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokGromDead","GLOBAL",1)
+    RealSetGlobalTimer("I#SarevokGromTime","GLOBAL",600)
+END
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    Dead("GROMNIR")
+    See(Player1)
+    Global("I#SarevokGromDead","GLOBAL",1)
+    RealGlobalTimerExpired("I#SarevokGromTime","GLOBAL")
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokGromDead","GLOBAL",2)
+END
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    See(Player1)
+    Global("I#SarevokGromDead","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+//Oasis (IEP)
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    AreaCheck("AR6300")
+    Global("I#SarevokOas","GLOBAL",0)
+    GlobalGT("TethyrBattleStart","GLOBAL",0)
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokOas","GLOBAL",1)
+    RealSetGlobalTimer("I#SarevokOasTime","GLOBAL",600)
+END
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    RealGlobalTimerExpired("I#SarevokOasTime","GLOBAL")
+    Global("I#SarevokOas","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokOas","GLOBAL",2)
+END
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    Global("I#SarevokOas","GLOBAL",2)
+    See(Player1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+//drunk talk (IEP)
+
+IF
+    InParty(Myself)
+    Global("I#SarevokDrunk","GLOBAL",0)
+    CheckStatGT("SAREVOK",50,INTOXICATION)
+    See(Player1)
+    CombatCounter(0)
+    !See([ENEMY])
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+    OR(2)
+      AreaCheck("AR5003")
+      AreaCheck("AR5501")
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokDrunk","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    CombatCounter(0)
+    Global("I#SarevokDrunk","GLOBAL",1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+//sendai is dead (IEP)
+
+IF
+    InParty(Myself)
+    Dead("SENDAI")
+    Global("I#SarevokSendDead","GLOBAL",0)
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokSendDead","GLOBAL",1)
+    RealSetGlobalTimer("I#SarevokSendTime","GLOBAL",600)
+END
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    Dead("SENDAI")
+    Global("I#SarevokSendDead","GLOBAL",1)
+    RealGlobalTimerExpired("I#SarevokSendTime","GLOBAL")
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokSendDead","GLOBAL",2)
+END
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#SarevokSendDead","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+//draconis (IEP)
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    Dead("BAZDRA01")
+    AreaCheck("AR6000")
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+    Global("I#SarevokDraco","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokDraco","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#SarevokDraco","GLOBAL",1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+//ToB end (IEP)
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    AreaCheck("AR4500")
+    Global("I#SarevokFinal","GLOBAL",0)
+    GlobalGT("BeginChallenge5","GLOBAL",3)
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokFinal","GLOBAL",1)
+    RealSetGlobalTimer("I#SarevokFinalTime","GLOBAL",360)
+END
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    AreaCheck("AR4500")
+    Global("I#SarevokFinal","GLOBAL",1)
+    GlobalGT("BeginChallenge5","GLOBAL",3)
+    !Global("LS#SarevokRomanceActive","GLOBAL",1)
+    !Global("LS#SarevokRomanceActive","GLOBAL",2)
+    RealGlobalTimerExpired("I#SarevokFinalTime","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("I#SarevokFinal","GLOBAL",2)
+END
+
+IF
+    InParty(Myself)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#SarevokFinal","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END

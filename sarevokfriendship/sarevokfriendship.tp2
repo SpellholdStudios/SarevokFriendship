@@ -1,0 +1,67 @@
+// --------------------------------------------
+// Mod setup
+// --------------------------------------------
+// Basics
+BACKUP ~sarevokfriendship/backup~
+AUTHOR ~Aeryn~
+VERSION ~2.4~
+README ~sarevokfriendship/sarevokfriendship.html~
+
+// Translations
+AUTO_TRA ~sarevokfriendship/translations/%s~
+
+ALWAYS
+  ACTION_IF GAME_IS ~eet~ BEGIN
+    OUTER_SET bg2_chapter = 12
+  END ELSE BEGIN
+    OUTER_SET bg2_chapter = 0
+  END
+  OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+    OUTER_SET bg2_chapter = bg2_chapter + 1
+    OUTER_SPRINT name_source ~bg2_chapter_%i%~
+    OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+  END
+
+  // No exception, everything needs to be converted
+  ACTION_DEFINE_ARRAY SarFrienoconvert BEGIN END
+
+  // any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+  ACTION_DEFINE_ARRAY SarFriereload BEGIN Setup END
+
+  LAF HANDLE_CHARSETS
+    INT_VAR
+      infer_charsets = 1
+    STR_VAR
+      tra_path = EVAL ~%MOD_FOLDER%/Translations~
+      noconvert_array = SarFrienoconvert
+      reload_array = SarFriereload
+  END
+END
+
+LANGUAGE ~English~
+         ~English~
+         ~sarevokfriendship/translations/english/setup.tra~
+
+LANGUAGE ~French (by Isaya)~
+         ~french~                                       
+         ~sarevokfriendship/translations/french/setup.tra~
+
+LANGUAGE ~Polish (by Astharoshe, member of SoM)~
+         ~Polish~
+         ~sarevokfriendship/translations/polish/setup.tra~
+
+LANGUAGE ~Chinese (by Merzbau)~
+         ~schinese~
+         ~sarevokfriendship/translations/schinese/setup.tra~
+BEGIN @0
+
+// Adding CD_STATE_NOTVALID
+APPEND ~STATE.IDS~
+  ~0x80101FEF CD_STATE_NOTVALID~
+  UNLESS ~CD_STATE_NOTVALID~
+
+// Compiling dialogue & scripts
+COMPILE ~sarevokfriendship/dialogue/sarev25j.d~
+EXTEND_BOTTOM ~SAREV25.bcs~ ~sarevokfriendship/scripts/sarev25.baf~
+
+
