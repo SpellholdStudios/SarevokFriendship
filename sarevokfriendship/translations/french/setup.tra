@@ -1,5 +1,7 @@
 @0    = ~Sarevok Friendship pour BGII : ToB~
+@1    = ~ToB n'est pas installe ! Merci d'installer Throne of Bhaal avant d'installer Sarevok Friendship.~
 
+// WeiDU prompts
 @-1000= "Le mod %TP2_FILE_NAME% contient"
 @-1001= "composants optionnels distincts.
 Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
