@@ -162,6 +162,7 @@ A: Sure, we'd be happy to. If you are interested in translating, just send us a 
 
 - Added *sarevokfriendship.ini* metadata file to support AL|EN's "Project Infinity".
 - Added `REQUIRE_PREDICATE` process to avoid installing the mod in inaccurate games.
+- Component: added *DESIGNATED* number and "*sarevok_friendship*" LABEL.
 - tp2 file: added credits for translations.
 - README command now accepts translated files.
 - Updated deprecated modding tools links.

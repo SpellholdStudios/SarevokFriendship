@@ -60,8 +60,13 @@ LANGUAGE ~Chinese (translation by Merzbau)~
          ~sarevokfriendship/translations/schinese/setup.tra~
 
 
+/* ===================================== *
+ *    Sarevok Friendship for BG2: ToB    *
+ * ===================================== */
+
 BEGIN @0
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @1 /* ToB is not installed! Please install the Throne of Bhaal expansion before installing the Sarevok Friendship. */
+DESIGNATED 0 LABEL ~sarevok_friendship~
 
 /* CamDawg's custom IsValidForPartyDialogue() state. Thanks Cam!
    covers STATE_CONFUSED, STATE_FEEBLEMINDED, STATE_SILENCED, STATE_DEAD, STATE_ACID_DEATH, STATE_FLAME_DEATH, STATE_EXPLODING_DEATH, STATE_STONE_DEATH, STATE_FROZEN_DEATH, STATE_HELPLESS, STATE_STUNNED, STATE_PANIC, STATE_BERSERK, STATE_SLEEPING */
@@ -71,5 +76,3 @@ APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
 // Compiling dialogue & scripts
 COMPILE ~sarevokfriendship/dialogue/sarev25j.d~
 EXTEND_BOTTOM ~sarev25.bcs~ ~sarevokfriendship/scripts/sarev25.baf~
-
-
