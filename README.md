@@ -1,4 +1,4 @@
-![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/SarevokFriendship?include_prereleases&color=darkred)<a name="top" id="top">
+![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/SarevokFriendship?include_prereleases&color=darkred)<a name="top" id="top"> </a>
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macos%20%7C%20linux&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20Polish%20%7C%20Chinese&color=limegreen)
 
@@ -12,7 +12,7 @@ Baldur's Gate Trilogy and EET<h3>
 
 **Author:** Aeryn  
 **Mod Website:** <a href="http://www.spellholdstudios.net/ie/npciep">Spellhold Studios</a>  
-**Mod Forum:** <a href="http://www.shsforums.net/index.php?showforum=574">Sarevok Friendship</a><br /><br />
+**Mod Forum:** <a href="http://www.shsforums.net/topic/55704-sarevok-friendship/">Sarevok Friendship</a><br /><br />
 
 
 <div align="center">
@@ -30,7 +30,7 @@ One of the things many find sorely lacking in the Bioware NPCs are the more comp
 This mod adds a series of dialogues with Sarevok, the PC's brother, expanding on Sarevok's experiences and struggles.
 
 
-Visit the <a href="http://www.spellholdstudios.net/ie/npciep">website</a> or <a href="http://www.shsforums.net/index.php?showforum=555">forum</a> for all the latest updates.
+Visit the <a href="http://www.spellholdstudios.net/ie/npciep">website</a> or <a href="http://www.shsforums.net/topic/55704-sarevok-friendship/">forum</a> for all the latest updates.
 
 
 <hr>
@@ -40,7 +40,7 @@ Visit the <a href="http://www.spellholdstudios.net/ie/npciep">website</a> or <a 
 
 This mod is designed to work on the following Infinity Engine games: the original Baldur's Gate II (BG2 or just SoA) with the Throne of Bhaal (ToB) expansion, Baldur's Gate II: Enhanced Edition (BG2EE), the conversion projects Baldur's Gate Trilogy (BGT) and Enhanced Edition Trilogy (EET).
 
-The Sarevok Friendship mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is only compatible with BGII: ToB. If you do encounter an error, please contact <a href="kae@spellholdstudios.net">K'aeloree</a> or alternatively post on the <a href="http://www.shsforums.net/index.php?showforum=574">forums</a>.
+The Sarevok Friendship mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is only compatible with BGII: ToB. If you do encounter an error, please contact <a href="kae@spellholdstudios.net">K'aeloree</a> or alternatively post on the <a href="http://www.shsforums.net/topic/55704-sarevok-friendship/">forums</a>.
 
 >Although it is not required for the Sarevok Friendship to function properly, it is always a good idea to install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a>.
 <div align="right"><a href="#top">Back to top</a></div>
@@ -157,6 +157,13 @@ A: Sure, we'd be happy to. If you are interested in translating, just send us a 
 
 
 ## <a name="versions" id="versions"></a>Versions History
+
+##### Version 2.6 (December 14, 2019)
+
+- Fixed an issue with *Auto-Package Generator tool*: new version of MacOS (Catalina) prevented the mod to be installed.
+- Fixed wrong SHS links in readmes and metadata files.
+
+## 
 
 ##### Version 2.5 (November 25, 2019)
 
