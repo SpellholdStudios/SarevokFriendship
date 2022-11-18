@@ -4,7 +4,7 @@
 // Basics
 BACKUP ~sarevokfriendship/backup~
 AUTHOR ~Aeryn~
-VERSION ~v2.6~
+VERSION ~v2.7~
 README ~sarevokfriendship/sarevokfriendship-readme-%LANGUAGE%.html~ ~sarevokfriendship/sarevokfriendship-readme-english.html~
 
 // Translations

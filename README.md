@@ -132,6 +132,7 @@ A: Sure, we'd be happy to. If you are interested in translating, just send us a 
 - French translation: Isaya.
 - Polish translation: Astharoshe, member of Stars of Mystra.
 - Chinese translation: Merzbau.
+- Russian translation: Arkie.
 - With thanks to The IEP team, Alessia, IceDragon, BGII-addicted, AmyAE, Dagger, lotiel, JupitersDarling, zarffyn and Arconian03.
 
 ## 
@@ -157,6 +158,12 @@ A: Sure, we'd be happy to. If you are interested in translating, just send us a 
 
 
 ## <a name="versions" id="versions"></a>Versions History
+
+##### Version 2.7 (November 20, 2022)
+
+- Added Russian translation by Arkie.
+
+## 
 
 ##### Version 2.6 (December 14, 2019)
 
